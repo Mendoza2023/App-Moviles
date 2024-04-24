@@ -1,0 +1,27 @@
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(23, 25, 24);
+  color: rgb(249, 246, 246);
+  text-align: center;
+}
+/* La imagen que ponemos como fondo de body
+le aplicamos el tamaño adecuado para centrarla 
+sin que se repita*/
+body {
+  background-image: url('images/itvo2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+ /* Aqui en la clase container alinearemos el 
+ cuadro y pondremos un margen, asi como 
+ alinearemos su contenido */
+ 
+  .w3-container {
+    margin: 0 auto;
+    text-align: center;
+  }

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Formularios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="validation.js"></script>
+
+
+</head>
+
+<body>
+  <form action="ejemplo.php" method="post" enctype="mutipart/form-data" id="frmDatos" name="frmDatos">
+    <p>Nombre: <input type="text" name="nombre" size="40" maxlength="50" minlength="3" required></p>
+    <p>Año de nacimiento: <input type="number" name="nacido" 
+      min="1900" max="9999" maxlength="4"
+           
+       onkeyprees = "return onlyNumberKey(event)"></p>
+    <p>Sexo:
+      <input type="radio" name="hm" value="h"> Hombre
+      <input type="radio" name="hm" value="m"> Mujer
+    </p>
+
+    <input type="file" name="foto"> <br>
+    <input type="search" name="busqueda" placeholder="Escriba lo que desea buscar" autofocus> <br>
+    <input type="email" name="correo" placeholder="usuario@server" required value="Mendoza@gmail.com"> <br>
+    <input type="date" name="fecha" required> <br>
+    <input type="time" name="hora"> <br>
+    <input type="hidden" name="oculto" value="Dato invisible al usuario"> <br>
+
+    <input type="button" value="Hazme click"> <br>
+    <button name="btnTest">Hazme click tambien </button> <br>
+    Comentarios
+    <textarea name="comentarios">Aqui va el texto predeterminado</textarea> <br>
+
+    <input type="number" name="numero" step="2" min="4" max="20"> <br>
+
+    <input type="radio" name="boton" value="1" checked>Opción 1<br>
+    <input type="radio" name="boton" value="2">Opción 2
+    <br>
+
+    <input type="color" name="colorElegido"> <br>
+
+    <select name="menu[]" multiple>
+      <option value="1">Uno</option>
+      <option value="2">Dos</option>
+      <option value="3" selected>Tres</option>
+      <option value="4" selected>Cuatro</option>
+      <option value="5" selected>Cinco</option>
+    </select>
+
+    <select name="menugroup">
+      <option selected>...</option>
+      <optgroup label="Grupo1">
+        <option value="1">Opción uno</option>
+        <option value="2">Opción dos</option>
+        <option value="3">Opción tres</option>
+      </optgroup>
+      <optgroup label="Grupo2">
+        <option value="4">Opción cuatro</option>
+        <option value="5">Opción cinco</option>
+        <option value="6">Opción seis</option>
+      </optgroup>
+    </select>
+
+    <p>
+
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Borrar">
+    </p>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style2.css" type="text/css">
+     </head>
+
+  <body>
+    <header class="w3-container w3-black" style="text-align: center;">
+    <h1>INSTITUTO TECNOLOGICO DEL VALLE DE OAXACA</h1>
+  </header><br><br><br><br>
+
+  <div class="w3-container w3-white" style="max-width: 400px">
+    <div class="w3-card">
+      <form id="login-form">
+        <h1>INICIA SESION</h1><br>
+        <label for="mv"> Usuario:ㅤ</label>
+        <input type="text" id="Usuario" name="usuario" required><br><br>
+        <label for="mv12">Password:</label>
+        <input type="Password" id="Password" name="Password" required><br><br>
+        <button type="submit">Iniciar sesión</button><br><br>
+      </form>
+    </div>
+  </div>
+
+     <script>
+      const form = document.getElementById("login-form");
+      
+      form.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        
+        const Usuario = form.elements.Usuario.value;
+        const Password = form.elements.Password.value;
+        
+        if (Usuario === "mv" && Password === "mv12") {
+                window.location.href = "page_1.html";
+        } else {
+          alert("Datos incorrectos");
+        }
+      });
+    </script>
+    <footer>
+      <p>ITVO 2023 - Todos los Derechos Reservados</p>
+    </footer>
+  </body>
+</html>

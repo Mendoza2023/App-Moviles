@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tiendita Mendoza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="style.css" type="text/css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <script src="storage.js"></script>
+</head>
+<body>
+  <h2>Tiendita Mendoza</h2>
+
+  <div class="card">
+    <img src="img_avatar.png" alt="Avatar">
+    <div class="container">
+      <form>
+        <label for="id">ID:</label>
+        <input type="text" id="id">
+        <br>
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion">
+        <br>
+        <label for="precio">Precio:</label>
+        <input type="text" id="precio">
+        <br>
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca">
+        <br>
+        <label for="categoria">Categoría:</label>
+        <select id="categoria">
+          <option value="Electrodomesticos">Electrodomesticos</option>
+          <option value="Comida">Comida</option>
+          <option value="Ropa">Ropa</option>
+          <option value="Hogar">Hogar</option>
+        </select>
+        </form>
+        <br>
+        <button id="btnSave" onclick="saveData();">Guardar</button>
+        <button id="btnDelete" onclick="deleteData();">Borrar todo</button>
+        <button id="btnList" onclick="listData();">Listar productos</button>
+      <br>
+      <br>
+      <input type="url" id="url" placeholder="Coloque la URL de la imagen" value="https://th.bing.com/th/id/R.6345aaa8e040b5764c3eb89f6c5dffbf?rik=73l1M5sM5T1Q7A&riu=http%3a%2f%2fsic.cultura.gob.mx%2fimages%2f63912&ehk=H47zdzlYKzXZX8NdAgT7MPLu5qzuwoUZQi8NzCQSUco%3d&risl=&pid=ImgRaw&r=0">
+      <input type="button" value="Guardar como PDF" onclick="savePDF()">
+      <div>
+        <table id="products">
+        </table>
+      </div>
+      <br>
+      <label for="search">Buscar:</label>
+      <input type="text" id="search">
+      <button id="btnSearch" onclick="searchData();">Buscar</button>
+      <button id="btnClearSearch" onclick="clearSearch();">Limpiar</button>
+      <button id="btnDelete" onclick="deleteProduct()">Eliminar</button>
+      <table id="product">
+      </table>
+      <div>
+        <br>
+        <button id="btnDelete" onclick="editData()">Editar</button>
+        <button id="btnSave" onclick="saveEdit()">Guardar</button>
+        <table id="product"></table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Storage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="style.css" type="text/css">
+       <script src="storage.js"></script>
+          </head>
+    <body>
+        <button id="btnDelete" onclick="deleteData();">Borrar todo</button>
+        <form>
+            <label for="fullname">Full name:</label>
+            <input type="text" id="fullname">
+            <br>
+            <label for="career">career:</label>
+            <select id="career">
+                <option value="Informática" selected>Ing. Informática</option>
+                <option value="Tics" >Ing. Tics</option>
+                <option value="Agronomia" >Ing. Agronomia</option>
+                <option value="Forestal" >Ing. Forestal</option>
+                <option value="Biologia" >Lic. Biologia</option>
+            </select>
+            <br>
+            <label for="genre">Genre:</label>
+            <select id="genre">
+                <option value="H" selected>Hombre</option>
+                <option value="M" >Mujer</option>
+            </select>
+            <br>
+            <button id="btnSave" onclick="saveData();">Guardar</button>
+
+        </form>
+        <br>
+        <button id="btnList" onclick="listData();">Listar estudiantes</button> 
+        <br>
+        <div>
+            <table id="students" border="1">
+            </table>
+        </div>
+    </body>
